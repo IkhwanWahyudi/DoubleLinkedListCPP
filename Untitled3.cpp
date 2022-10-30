@@ -36,7 +36,7 @@ void show(Node *head){
 }
 
 void showLast(Node *tail){
-	if (tail == NULL){
+    if (tail == NULL){
         cout << "LinkedList Kosong" << endl;
         system("pause");
         return;
@@ -56,8 +56,8 @@ void showLast(Node *tail){
 }
 
 void insertFirst(Node **head, Node **tail){
-	Node *nodeBaru = new Node;
-	Node *newNode = new Node();
+    Node *nodeBaru = new Node;
+    Node *newNode = new Node();
     cout << "Nama: "; cin.ignore(); getline(cin, newNode->data.nama);
     cout << "NIM : "; cin >> newNode->data.nim;
     cout << "IPK : "; cin >> newNode->data.ipk;
@@ -68,12 +68,12 @@ void insertFirst(Node **head, Node **tail){
     	*tail = newNode;
     	cout << "Tambah data berhasil" << endl;
     	return;
-	}
-	newNode->next = *head;
-	(*head)->prev = newNode;
-	*head = newNode;
-	panjangList++;
-	cout << "Tambah data berhasil" << endl;
+    }
+    newNode->next = *head;
+    (*head)->prev = newNode;
+    *head = newNode;
+    panjangList++;
+    cout << "Tambah data berhasil" << endl;
 }
 
 void insertLast(Node **head, Node **tail){
